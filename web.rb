@@ -355,7 +355,7 @@ def price_lookup(product)
 end
 
 def calculate_price(products, shipping)
-  amount = 1099  # Default amount.
+  amount = 2099  # Default amount.
 
   if products
     amount = products.reduce(0) { | sum, product | sum + price_lookup(product) }
@@ -368,7 +368,7 @@ def calculate_price(products, shipping)
     when "fedex_world"
       amount = amount + 2099
     when "ups_worldwide"
-      amount = amount + 1099
+      amount = amount + 2099
     end
   end
 
